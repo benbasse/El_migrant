@@ -15,9 +15,19 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            "name" => "admin",
+            "nom" => "Admin",
+            "prenom" => "Admin",
+            "adresse" => "123 Rue de l'Admin",
+            "paysActuelle" => "Sénégal",
+            "villeActuelle" => "Dakar",
+            "lieuNaissance" => "Dakar",
+            "dateNaissance" => "1980-01-01",
+            "situation" => "celibatire",
+            "sexe" => "homme",
+            "role" => "admin",
             "email" => "admin@gmail.com",
-            "password" => Hash::make("password123")
+            "email_verified_at" => now(),  // Optionnel
+            "password" => Hash::make("password123"),
         ]);
     }
 }
