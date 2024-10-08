@@ -23,7 +23,7 @@ class AideController extends Controller
         try {
             $aide = Aide::with([
                 'user' => function ($query) {
-                    $query->where('statut', 'migrant');
+                    $query->where('role', 'migrant');
                 }
             ])->get();
             if ($aide->isEmpty()) {
@@ -56,7 +56,7 @@ class AideController extends Controller
                 $user->situationMatrimoniale = $request->situationMatrimoniale;
                 $user->paysActuelle = $request->paysActuelle;
                 $user->villeActuelle = $request->villeActuelle;
-                $user->statut = "migrant";
+                $user->role = "migrant";
                 $user->email = $request->email;
                 $user->password = 'defaulpassword';
                 $user->save();
@@ -65,6 +65,7 @@ class AideController extends Controller
             $aide->date = Carbon::now();
             $aide->user_id = $user->id;
             $aide->save();
+            return $this->succesResponse($aide, "l'users ajouté dans l'historique des aides");
         } catch (Exception $e) {
             return response()->json($e);
         }
@@ -109,7 +110,7 @@ class AideController extends Controller
                 $user->situationMatrimoniale = $request->situationMatrimoniale;
                 $user->paysActuelle = $request->paysActuelle;
                 $user->villeActuelle = $request->villeActuelle;
-                $user->statut = "migrant";
+                $user->role = "migrant";
                 $user->email = $request->email;
                 $user->password = 'defaulpassword';
                 $user->save();
@@ -118,6 +119,7 @@ class AideController extends Controller
             $aide->date = Carbon::now();
             $aide->user_id = $user->id;
             $aide->save();
+            return $this->succesResponse($aide, "modification réussi");
         } catch (Exception $e) {
             return response()->json($e);
         }

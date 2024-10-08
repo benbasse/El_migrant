@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('login', [AuthController::class,'login']);
-Route::post('logout', [AuthController::class,'logout']);
-Route::post('refresh', [AuthController::class,'refresh']);
-Route::post('me', [AuthController::class,'me']);
+Route::post('login', [AuthController::class, 'login']);
+Route::post('logout', [AuthController::class, 'logout']);
+Route::post('refresh', [AuthController::class, 'refresh']);
+Route::post('me', [AuthController::class, 'me']);
 
 // Route::get('aides', [AideController::class, 'index']);
 Route::post('aide', [AideController::class, 'store']);
@@ -34,6 +34,7 @@ Route::get('signalement/{id}', [SignalementController::class, 'show']);
 Route::delete('signalement/{id}', [SignalementController::class, 'destroy']);
 
 
+Route::get('aides', [AideController::class, 'index']);
+
 Route::middleware(['auth:api', 'admin'])->group(function () {
-    Route::get('aides', [AideController::class, 'index']);
 });

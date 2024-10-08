@@ -13,15 +13,15 @@ class Signalements extends Model
         'raison',
         'description',
         'statut',
-        'type_signalement_id',
+        'typesignalement_id',
         'user_id',
         'date'
     ];
 
     public function typeSignalement(){
-        return $this->belongsTo(TypeSignalement::class, 'type_signalement_id');
+        return $this->belongsTo(TypeSignalement::class, 'typesignalement_id');
     }
-    
+
     public function user(){
         return $this->belongsTo(User::class, 'user_id');
     }

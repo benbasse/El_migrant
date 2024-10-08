@@ -21,11 +21,7 @@ class DonController extends Controller
     public function index()
     {
         try {
-            $don = Don::where([
-                'user' => function ($query) {
-                    $query->where('statut', 'userDon');
-                }
-            ])->get();
+            $don = Don::all();
             if ($don->isEmpty()) {
                 return response()->json([
                     "sucess" => true,
@@ -60,7 +56,7 @@ class DonController extends Controller
                 $user->situationMatrimoniale = $request->situationMatrimoniale;
                 $user->paysActuelle = $request->paysActuelle;
                 $user->villeActuelle = $request->villeActuelle;
-                $user->statut = "userDon";
+                // $user->statut = "userDon";
                 $user->email = $request->email;
                 $user->password = 'defaulpassword';
                 $user->save();
@@ -115,7 +111,7 @@ class DonController extends Controller
                 $user->paysActuelle = $request->paysActuelle;
                 $user->villeActuelle = $request->villeActuelle;
                 $user->email = $request->email;
-                $user->statut = "userDon";
+                $user->role = "userDon";
                 $user->save();
             }
             $don = Don::find($id);

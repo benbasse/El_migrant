@@ -24,7 +24,7 @@ class SignalementController extends Controller
             $signalement = Signalements::with([
                 'typeSignalement',
                 'user' => function ($query) {
-                    $query->where('statut', 'migrant');
+                    $query->where('role', 'migrant');
                 }
             ])->get();
             if ($signalement->isEmpty()) {
@@ -59,21 +59,21 @@ class SignalementController extends Controller
                 $user->dateNaissance = $request->dateNaissance;
                 $user->lieuNaissance = $request->lieuNaissance;
                 $user->situationMatrimoniale = $request->situationMatrimoniale;
-                $user->statut = "migrant";
+                $user->role = "migrant";
                 $user->paysActuelle = $request->paysActuelle;
                 $user->villeActuelle = $request->villeActuelle;
                 $user->email = $request->email;
                 $user->password = 'defaulpassword';
                 $user->save();
             } else {
-            $signalement = new Signalements();
-            $signalement->sujet = $request->sujet;
-            $signalement->description = $request->description;
-            $signalement->user_id = $user->id;
-            $signalement->type_signalement_id = $request->type_signalement_id;
-            $signalement->date = Carbon::now();
-            $signalement->save();
-            return $this->succesResponse($signalement, "Signalement enregistré");
+                $signalement = new Signalements();
+                $signalement->sujet = $request->sujet;
+                $signalement->description = $request->description;
+                $signalement->user_id = $user->id;
+                $signalement->typesignalement_id = $request->typesignalement_id;
+                $signalement->date = Carbon::now();
+                $signalement->save();
+                return $this->succesResponse($signalement, "Signalement enregistré");
             }
         } catch (Exception $e) {
             return response()->json($e);
@@ -87,7 +87,7 @@ class SignalementController extends Controller
     {
         try {
             $signalement = Signalements::with('user')
-                ->with('typeSignalement')
+                ->with('TypeSignalement')
                 ->find($id);
             if ($signalement) {
                 return $this->succesResponse($signalement, "Details de cette signalements");

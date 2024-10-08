@@ -16,7 +16,8 @@ return new class extends Migration
             $table->id();
             $table->integer("montant");
             $table->dateTime("date");
-            $table->unsignedBigInteger(User::class);
+            $table->unsignedBigInteger("user_id");
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
             $table->timestamps();
         });
     }

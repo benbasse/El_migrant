@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('dateNaissance');
             $table->enum("situationMatrimoniale", ["marie", "celibatire", "autre"]);
             $table->enum("sexe", ["homme", "femme"]);
-            $table->enum("role", ["admin", "migrant", "userDon"]);
+            $table->enum("role", ["admin", "migrant", "userDon"])->default("migrant");
             $table->string('email', 191)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

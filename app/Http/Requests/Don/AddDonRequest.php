@@ -27,7 +27,7 @@ class AddDonRequest extends FormRequest
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'adresse' => 'required|string|max:255',
-            'numeroTelephone' => 'required|integer|max:20|unique:users,numeroTelephone',
+            'numeroTelephone' => 'required|integer|unique:users,numeroTelephone',
             'dateNaissance' => 'required|date',
             'lieuNaissance' => 'required|string|max:255',
             'situationMatrimoniale' => 'required|string|max:50',

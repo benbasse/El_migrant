@@ -19,10 +19,12 @@ return new class extends Migration
             $table->date("date");
             $table->longText("description");
             $table->enum("statut", ["estTraite", "nonTraite", "enCours"])->default("nonTraite");
-            $table->unsignedInteger(TypeSignalement::class);
-            $table->unsignedInteger(User::class);
+            $table->unsignedBigInteger("typesignalement_id");
+            $table->foreign("typesignalement_id")->references("id")->on("type_signalements")->onDelete("cascade");
+            $table->unsignedBigInteger("user_id");
+            $table->foreign("user_id")->references("id")->on(   "users")->onDelete("cascade");
             // $table->foreignId('user_id')->constrained('users');
-            // $table->foreignId('typesignalement_id')->constrained('type_signalements'); 
+            // $table->foreignId('typesignalement_id')->constrained('type_signalements');
             $table->timestamps();
         });
     }
