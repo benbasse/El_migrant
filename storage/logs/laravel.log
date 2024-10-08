@@ -82,7 +82,7 @@
 #37 /Users/air/Desktop/Migrant/el_migrant/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #38 /Users/air/Desktop/Migrant/el_migrant/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('/Users/air/Desk...')
 #39 {main}
-"} 
+"}
 [2024-08-06 20:59:53] local.ERROR: Too many arguments to "make:model" command, expected arguments "name". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments to \"make:model\" command, expected arguments \"name\". at /Users/air/Desktop/Migrant/el_migrant/vendor/symfony/console/Input/ArgvInput.php:193)
 [stacktrace]
 #0 /Users/air/Desktop/Migrant/el_migrant/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('API/-r')
@@ -97,7 +97,7 @@
 #9 /Users/air/Desktop/Migrant/el_migrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #10 /Users/air/Desktop/Migrant/el_migrant/artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #11 {main}
-"} 
+"}
 [2024-08-06 21:00:08] local.ERROR: Too many arguments to "make:model" command, expected arguments "name". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments to \"make:model\" command, expected arguments \"name\". at /Users/air/Desktop/Migrant/el_migrant/vendor/symfony/console/Input/ArgvInput.php:193)
 [stacktrace]
 #0 /Users/air/Desktop/Migrant/el_migrant/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('/API')
@@ -112,7 +112,7 @@
 #9 /Users/air/Desktop/Migrant/el_migrant/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #10 /Users/air/Desktop/Migrant/el_migrant/artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #11 {main}
-"} 
+"}
 [2024-10-08 14:29:00] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (Connection: mysql, SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (Connection: mysql, SQL: alter table `users` add unique `users_email_unique`(`email`)) at C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
@@ -190,7 +190,7 @@
 #34 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #35 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #36 {main}
-"} 
+"}
 [2024-10-08 14:32:42] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `nom` varchar(255) not null, `prenom` varchar(255) not null, `adresse` varchar(255) not null, `paysActuelle` varchar(255) not null, `villeActuelle` varchar(255) not null, `lieuNaissance` varchar(255) not null, `dateNaissance` date not null, `situation` enum('marie', 'celibatire') not null, `sexe` enum('homme', 'femme') not null, `role` enum('admin', 'migrant', 'userDon') not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 La table 'users' existe déjà (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `nom` varchar(255) not null, `prenom` varchar(255) not null, `adresse` varchar(255) not null, `paysActuelle` varchar(255) not null, `villeActuelle` varchar(255) not null, `lieuNaissance` varchar(255) not null, `dateNaissance` date not null, `situation` enum('marie', 'celibatire') not null, `sexe` enum('homme', 'femme') not null, `role` enum('admin', 'migrant', 'userDon') not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
@@ -268,7 +268,7 @@
 #34 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #35 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #36 {main}
-"} 
+"}
 [2024-10-08 14:32:51] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (Connection: mysql, SQL: create table `password_reset_tokens` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null, primary key (`email`)) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est trop longue. Longueur maximale: 1000 (Connection: mysql, SQL: create table `password_reset_tokens` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null, primary key (`email`)) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
@@ -368,7 +368,7 @@
 #45 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #46 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #47 {main}
-"} 
+"}
 [2024-10-08 14:45:51] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Champ 'name' inconnu dans field list (Connection: mysql, SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (admin, admin@gmail.com, $2y$12$.xv4gDWvqUs/EVxA5nKSUOCbbVyWQieeJ0.CspqsouGOWJ8dsobU., 2024-10-08 14:45:51, 2024-10-08 14:45:51)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Champ 'name' inconnu dans field list (Connection: mysql, SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (admin, admin@gmail.com, $2y$12$.xv4gDWvqUs/EVxA5nKSUOCbbVyWQieeJ0.CspqsouGOWJ8dsobU., 2024-10-08 14:45:51, 2024-10-08 14:45:51)) at C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
@@ -456,7 +456,7 @@
 #39 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #40 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #41 {main}
-"} 
+"}
 [2024-10-08 14:50:34] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ 'admin@gmail.com' pour la clef 'users.users_email_unique' (Connection: mysql, SQL: insert into `users` (`nom`, `prenom`, `adresse`, `paysActuelle`, `villeActuelle`, `lieuNaissance`, `dateNaissance`, `situation`, `sexe`, `role`, `email`, `email_verified_at`, `password`, `updated_at`, `created_at`) values (Admin, Admin, 123 Rue de l'Admin, Sénégal, Dakar, Dakar, 1980-01-01, celibatire, homme, admin, admin@gmail.com, 2024-10-08 14:50:34, $2y$12$jVufAHkscLFBZivqXgwKy.xuB4H2yhzomff/dqcDbsunFdbS4oT/., 2024-10-08 14:50:34, 2024-10-08 14:50:34)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ 'admin@gmail.com' pour la clef 'users.users_email_unique' (Connection: mysql, SQL: insert into `users` (`nom`, `prenom`, `adresse`, `paysActuelle`, `villeActuelle`, `lieuNaissance`, `dateNaissance`, `situation`, `sexe`, `role`, `email`, `email_verified_at`, `password`, `updated_at`, `created_at`) values (Admin, Admin, 123 Rue de l'Admin, Sénégal, Dakar, Dakar, 1980-01-01, celibatire, homme, admin, admin@gmail.com, 2024-10-08 14:50:34, $2y$12$jVufAHkscLFBZivqXgwKy.xuB4H2yhzomff/dqcDbsunFdbS4oT/., 2024-10-08 14:50:34, 2024-10-08 14:50:34)) at C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:820)
 [stacktrace]
 #0 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
@@ -562,4 +562,4 @@
 #48 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #49 C:\\Users\\mouss\\Desktop\\MyProjects\\El_migrant\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #50 {main}
-"} 
+"}

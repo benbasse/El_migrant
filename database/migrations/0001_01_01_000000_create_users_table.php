@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('paysActuelle');
             $table->string('villeActuelle');
             $table->string('lieuNaissance');
+            $table->integer('numeroTelephone');
             $table->date('dateNaissance');
-            $table->enum("situation", ["marie", "celibatire"]);
+            $table->enum("situationMatrimoniale", ["marie", "celibatire", "autre"]);
             $table->enum("sexe", ["homme", "femme"]);
             $table->enum("role", ["admin", "migrant", "userDon"]);
             $table->string('email', 191)->unique();
