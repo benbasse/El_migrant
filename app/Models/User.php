@@ -70,10 +70,15 @@ class User extends Authenticatable implements JWTSubject
     }
 
     public function signalement(){
-        return $this->hasMany(Signalements::class, "user_id");
+        return $this->hasMany(Signalements::class, 'user_id');
     }
 
     public function don(){
         return $this->hasMany(Don::class, 'user_id');
     }
+
+    public function aide(){
+        return $this->hasMany(Aide::class, "user_id");
+    }
+
 }

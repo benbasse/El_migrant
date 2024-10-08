@@ -14,7 +14,8 @@ class Signalements extends Model
         'description',
         'statut',
         'type_signalement_id',
-        "user_id"
+        'user_id',
+        'date'
     ];
 
     public function typeSignalement(){
